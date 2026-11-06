@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EnterpriseInfrastructureHealthReportWorksheets",
+  "type": "object",
+  "properties": {
+    "worksheets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sheet_number": { "type": "integer" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "domain_focus": { "type": "string" }
+        }
+      }
+    }
+  },
+  "default": {
+    "worksheets": [
+      { "sheet_number": 1, "name": "Executive Summary", "description": "High-level risk posture, host census, critical alert rollup", "domain_focus": "Executive" },
+      { "sheet_number": 2, "name": "Scorecard & KPI", "description": "Layer-by-layer compliance scorecards across all subsystems", "domain_focus": "Governance" },
+      { "sheet_number": 3, "name": "System & OS Baseline", "description": "Hardware, compute, RAM pressure, uptime, storage geometry", "domain_focus": "Windows Server" },
+      { "sheet_number": 4, "name": "Active Directory DS", "description": "Forest/domain functional levels, Recycle Bin, site subnets", "domain_focus": "Active Directory" },
+      { "sheet_number": 5, "name": "Domain Controllers & FSMO", "description": "DC inventory, role placement, Global Catalog, PDC emulator", "domain_focus": "Active Directory" },
+      { "sheet_number": 6, "name": "AD Replication & SYSVOL", "description": "Intersite topology, DFSR backlog, SYSVOL/Netlogon shares", "domain_focus": "Active Directory" },
+      { "sheet_number": 7, "name": "DNS Server & Zones", "description": "Forward/reverse lookups, forwarders, aging & scavenging", "domain_focus": "Network & DNS" },
+      { "sheet_number": 8, "name": "DHCP Server & Scopes", "description": "Active scopes, exhaustion risk, failover clustering", "domain_focus": "Network & DHCP" },
+      { "sheet_number": 9, "name": "Failover Clustering", "description": "Cluster quorum, witness disk, node health, network routing", "domain_focus": "Clustering" },
+      { "sheet_number": 10, "name": "Hyper-V Infrastructure", "description": "Virtual switch geometry, CSV block cache, NUMA, power plans", "domain_focus": "Hyper-V" },
+      { "sheet_number": 11, "name": "Hyper-V Virtual Machines", "description": "VM state, vCPU overcommit, dynamic RAM, snapshots, ISO locks", "domain_focus": "Hyper-V" },
+      { "sheet_number": 12, "name": "VMware vCenter Health", "description": "VCSA appliance health, build level, certificate lifecycle", "domain_focus": "VMware vSphere" },
+      { "sheet_number": 13, "name": "VMware ESXi Hosts", "description": "Host readiness %, ballooning, DRS/HA events, memory pressure", "domain_focus": "VMware vSphere" },
+      { "sheet_number": 14, "name": "Enterprise Storage & LUNs", "description": "CSV volumes, VMFS datastores, IOPS latency, free space %", "domain_focus": "Storage" },
+      { "sheet_number": 15, "name": "Backup & DR Posture", "description": "Backup agent heartbeat, SLA window, snapshot age > 72h", "domain_focus": "Resilience" },
+      { "sheet_number": 16, "name": "Security & CIS Hardening", "description": "Print Spooler, LDAP signing, Channel Binding, Protected Users", "domain_focus": "Cybersecurity" },
+      { "sheet_number": 17, "name": "Root Cause Analysis (RCA)", "description": "Formal RCA items with Probable Cause, Impact, and Risk", "domain_focus": "Operations" },
+      { "sheet_number": 18, "name": "Remediation Action Plan", "description": "Prioritized runbooks, rollbacks, and explicit approval tracking", "domain_focus": "Operations" }
+    ]
+  }
+}

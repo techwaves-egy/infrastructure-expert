@@ -1,0 +1,37 @@
+name: Framework Validation & Security Lint
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate Python Scripts
+        run: |
+          python -m py_compile scripts/compile_assessment.py
+          python -m py_compile scripts/generate_health_report.py
+          python -m py_compile scripts/audit_logger.py
+
+      - name: Validate PowerShell Scripts Syntax
+        run: |
+          Get-ChildItem -Path scripts -Recurse -Filter "*.ps1" | ForEach-Object {
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$null, [ref]$errors) | Out-Null
+            if ($errors.Count -gt 0) {
+              Write-Error "Syntax error in $($_.FullName): $($errors[0].Message)"
+            } else {
+              Write-Host "Validated: $($_.Name)"
+            }
+          }

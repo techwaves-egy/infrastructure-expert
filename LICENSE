@@ -1,0 +1,31 @@
+PROPRIETARY SOFTWARE LICENSE
+Infrastructure-Expert (Enterprise Infrastructure Health-Check & Operations CoE)
+Copyright (c) 2025-2026 Waleed Talaat / Techwaves EGY. All rights reserved.
+
+This software and all associated content, scripts, skills, documentation,
+templates, playbooks, and workflows (the "Software") are the
+property of Waleed Talaat / Techwaves EGY and are protected by
+copyright law and international intellectual property treaties.
+
+USE OF THIS SOFTWARE IS CONDITIONAL ON ACCEPTANCE OF THE TERMS OF THE
+END USER LICENSE AGREEMENT (EULA) CONTAINED IN "EULA.md".
+
+BY ACCESSING, CLONING, FORKING, DOWNLOADING, OR USING THIS SOFTWARE IN
+ANY WAY, YOU AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE.
+
+SUMMARY OF KEY TERMS:
+PERMITTED:
+  - Authorized, read-only health assessments and diagnostics on owned infrastructure
+  - Internal infrastructure hardening and operational optimization
+  - Integration with authorized enterprise AI coding agents (Antigravity, Claude, Cursor, Windsurf)
+
+PROHIBITED:
+  - Execution against any system without explicit authorization from the infrastructure owner
+  - Unauthorized, destructive, or disruptive operations
+  - Commercial redistribution or sub-licensing without written consent
+  - Removal of copyright notices, trademarks, or attribution
+
+NO WARRANTY: The Software is provided "AS IS" without warranty of any kind.
+NO LIABILITY: The Author shall not be liable for any damages arising from use or misuse of the Software.
+
+Contact: info@techwaves-egy.com | https://github.com/techwaves-egy

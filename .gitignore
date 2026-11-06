@@ -1,0 +1,51 @@
+# Git Ignore Rules — Enterprise Infrastructure Operations & Health-Check Specialist
+# Strictly Prevents Credential, Log, and Client Telemetry Leaks
+
+# Credentials, Secrets & Keys (Strictly Prohibited)
+*.key
+*.pem
+*.pfx
+*.cer
+*.crt
+*.p12
+*.kdb
+*.ps1xml
+.env
+.env.*
+secrets/
+credentials/
+*password*
+*passwd*
+
+# Live Telemetry, Diagnostic Caches & Customer State
+discovery/
+reports/
+audit/
+remediation/
+scratch/
+temp/
+tmp/
+*.jsonl
+*.log
+*.xlsx
+*.xls
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# OS & Editor Metadata
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~
+.idea/
+.vscode/

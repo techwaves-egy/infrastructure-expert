@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EnterpriseInfrastructureRootCauseAnalysis",
+  "type": "object",
+  "required": [
+    "issue_id",
+    "component",
+    "hostname",
+    "environment",
+    "detection",
+    "evidence",
+    "observed_condition",
+    "probable_root_cause",
+    "confidence",
+    "impact",
+    "severity",
+    "recommended_remediation",
+    "risk",
+    "rollback_plan",
+    "approval_required"
+  ],
+  "properties": {
+    "issue_id": { "type": "string", "pattern": "^ISSUE-[A-Z0-9]+-[0-9]{3}$" },
+    "component": { "type": "string" },
+    "hostname": { "type": "string" },
+    "environment": { "type": "string", "enum": ["Production", "Staging", "Disaster Recovery", "Lab"] },
+    "detection": { "type": "string" },
+    "evidence": { "type": "string" },
+    "observed_condition": { "type": "string" },
+    "probable_root_cause": { "type": "string" },
+    "confidence": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] },
+    "impact": { "type": "string" },
+    "severity": { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFORMATIONAL"] },
+    "recommended_remediation": { "type": "string" },
+    "risk": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] },
+    "rollback_plan": { "type": "string" },
+    "approval_required": { "type": "boolean" }
+  }
+}
