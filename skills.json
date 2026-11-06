@@ -5,6 +5,11 @@
       "name": "infrastructure-health",
       "description": "Execute comprehensive enterprise infrastructure health-checks locally or remotely across Windows Servers, Active Directory, DNS, DHCP, Hyper-V, and VMware vSphere.",
       "path": "skills/infrastructure-health/SKILL.md"
+    },
+    {
+      "name": "infrastructure-expert",
+      "description": "Enterprise Infrastructure Operations & Health-Check Center of Excellence (CoE) specialist skill.",
+      "path": "skills/infrastructure-expert/SKILL.md"
     }
   ]
 }
